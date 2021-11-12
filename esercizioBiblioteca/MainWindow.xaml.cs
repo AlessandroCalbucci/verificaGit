@@ -20,9 +20,47 @@ namespace esercizioBiblioteca
     /// </summary>
     public partial class MainWindow : Window
     {
+        Biblioteca b;
+
         public MainWindow()
         {
             InitializeComponent();
+
+            b = new Biblioteca("biblioteca", "via aaa");
+
+            lblNTot.Content=Convert.ToString(b.NumeroLibriPresenti());
+        }
+
+        private void bttCrea_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Libro L = new Libro(txtAutore.Text, txtTitolo.Text, Convert.ToString(txtAnno.Text), txtEditore.Text, Convert.ToString(txtNPag.Text));
+
+                b.AggiungiLibro(l);
+
+            }catch(Exception ex)
+            {
+                MessageBox.Show("errore: " + ex.Message);
+            }
+        }
+
+        private void bttCerca_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (rdbTitolo.IsChecked == true)
+                {
+                    lstLibri.ItemsSource = b.RicercaPerTitolo(txtCerca.Text);
+                }
+                else if (rdbAutore.IsChecked == true)
+                {
+                    lstLibri.ItemsSource = b.RicercaLibriPerAutore(txtCerca.Text);
+                }
+            }catch(Exception ex)
+            {
+                MessageBox.Show("errore: " + ex.Message);
+            }
         }
     }
 }
