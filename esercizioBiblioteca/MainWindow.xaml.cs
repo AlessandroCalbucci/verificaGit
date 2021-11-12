@@ -28,7 +28,7 @@ namespace esercizioBiblioteca
 
             b = new Biblioteca("biblioteca", "via aaa");
 
-            lblNTot.Content=Convert.ToString(b.LibriTotali());
+            lblNTot.Content = "0";
         }
 
         private void bttCrea_Click(object sender, RoutedEventArgs e)
@@ -39,6 +39,7 @@ namespace esercizioBiblioteca
 
                 b.AggiungiLibro(l);
 
+                lblNTot.Content = "" + b.LibriTotali();
             }catch(Exception ex)
             {
                 MessageBox.Show("errore: " + ex.Message);
