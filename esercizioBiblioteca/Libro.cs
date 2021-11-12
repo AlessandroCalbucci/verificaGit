@@ -83,6 +83,8 @@ namespace esercizioBiblioteca
             NumeroPagine = nPag;
         }
 
+        public Libro() { }
+
         public int ReadingTime()
         {
             if (NumeroPagine < 100)

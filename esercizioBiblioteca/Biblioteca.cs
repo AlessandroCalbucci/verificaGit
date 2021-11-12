@@ -47,24 +47,24 @@ namespace esercizioBiblioteca
             set;
         }
 
-       /* public List<Libro> Libri
+        public List<Libro> Libri
         {
             get;
             set;
-        }*/
+        }
 
-        public Biblioteca(string nome, string indirizzo, string[] orariApertura, string[] orariChiusura)
+        public Biblioteca(string nome, string indirizzo)
         {
             Nome = nome;
             Indirizzo = indirizzo;
-            OrariApertura = orariApertura;
-            OrariChiusura = orariChiusura;
         }
 
-       /* public Biblioteca(string nome, string indirizzo, string[] orariApertura, string[] orariChiusura, List<Libro> libri) : this(nome, indirizzo, orariApertura, orariChiusura)
+       public Biblioteca(string nome, string indirizzo, string[] orariApertura, string[] orariChiusura, List<Libro> libri) : this(nome, indirizzo)
         {
-
-        }*/
+            OrariApertura = orariApertura;
+            OrariChiusura = orariChiusura;
+            Libri = libri;
+        }
 
         public void AggiungiLibro(Libro l)
         {
@@ -73,16 +73,20 @@ namespace esercizioBiblioteca
 
         public Libro RicercaPerTitolo(string titolo)
         {
+            Libro libro=new Libro();
+
             foreach(Libro l in Libri)
             {
                 if (l.Titolo == titolo)
-                    return l;
+                    libro = l;
             }
+
+            return libro;
         }
 
         public List<Libro> RicercaLibriPerAutore(string autore)
         {
-            List<Libro> libriTrovati;
+            List<Libro> libriTrovati=new List<Libro>();
 
             foreach(Libro l in Libri)
             {

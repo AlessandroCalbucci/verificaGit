@@ -28,14 +28,14 @@ namespace esercizioBiblioteca
 
             b = new Biblioteca("biblioteca", "via aaa");
 
-            lblNTot.Content=Convert.ToString(b.NumeroLibriPresenti());
+            lblNTot.Content=Convert.ToString(b.LibriTotali());
         }
 
         private void bttCrea_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                Libro L = new Libro(txtAutore.Text, txtTitolo.Text, Convert.ToString(txtAnno.Text), txtEditore.Text, Convert.ToString(txtNPag.Text));
+                Libro l = new Libro(txtAutore.Text, txtTitolo.Text, int.Parse(txtAnno.Text), txtEditore.Text, int.Parse(txtNPag.Text));
 
                 b.AggiungiLibro(l);
 
@@ -49,9 +49,11 @@ namespace esercizioBiblioteca
         {
             try
             {
+                lstLibri.ItemsSource = null;
+
                 if (rdbTitolo.IsChecked == true)
                 {
-                    lstLibri.ItemsSource = b.RicercaPerTitolo(txtCerca.Text);
+                    lstLibri.ItemsSource = (System.Collections.IEnumerable)b.RicercaPerTitolo(txtCerca.Text);
                 }
                 else if (rdbAutore.IsChecked == true)
                 {
