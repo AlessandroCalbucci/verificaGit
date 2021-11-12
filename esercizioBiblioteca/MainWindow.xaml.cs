@@ -29,6 +29,8 @@ namespace esercizioBiblioteca
             b = new Biblioteca("biblioteca", "via aaa");
 
             lblNTot.Content = "0";
+            
+            //prova commento da github
         }
 
         private void bttCrea_Click(object sender, RoutedEventArgs e)
