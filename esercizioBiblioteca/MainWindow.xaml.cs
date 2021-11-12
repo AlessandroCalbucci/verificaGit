@@ -40,6 +40,8 @@ namespace esercizioBiblioteca
                 b.AggiungiLibro(l);
 
                 lblNTot.Content = "" + b.LibriTotali();
+
+                MessageBox.Show("libro creato con successo");
             }catch(Exception ex)
             {
                 MessageBox.Show("errore: " + ex.Message);

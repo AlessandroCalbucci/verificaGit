@@ -10,6 +10,7 @@ namespace esercizioBiblioteca
     {
         private string _nome;
         private string _indirizzo;
+        private List<Libro> _libri;
 
         public string Nome
         {
@@ -49,14 +50,15 @@ namespace esercizioBiblioteca
 
         public List<Libro> Libri
         {
-            get;
-            set;
+            get => _libri;
+            set { _libri = value; }
         }
 
         public Biblioteca(string nome, string indirizzo)
         {
             Nome = nome;
             Indirizzo = indirizzo;
+            _libri = new List<Libro>();
         }
 
        public Biblioteca(string nome, string indirizzo, string[] orariApertura, string[] orariChiusura, List<Libro> libri) : this(nome, indirizzo)
