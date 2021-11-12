@@ -83,6 +83,16 @@ namespace esercizioBiblioteca
             NumeroPagine = nPag;
         }
 
+        public int ReadingTime()
+        {
+            if (NumeroPagine < 100)
+                return 1;
+            else if (NumeroPagine >= 100 && NumeroPagine < 200)
+                return 2;
+            else
+                return 3;
+        }
+
         public override string ToString()
         {
             return "Autore: " + Autore + ", Titolo: " + Titolo + ", Anno Pubblicazione: " + AnnoPubblicazione + ", Editore: " + Editore + ", Numero Pagine: " + NumeroPagine;
