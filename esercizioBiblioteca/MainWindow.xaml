@@ -7,6 +7,27 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Label Content="Creazione Libro" HorizontalAlignment="Left" Margin="615,10,0,0" VerticalAlignment="Top" Width="167"/>
+        <Label Content="Titolo:" HorizontalAlignment="Left" Margin="559,39,0,0" VerticalAlignment="Top" Width="52"/>
+        <Label Content="Autore:" HorizontalAlignment="Left" Margin="559,81,0,0" VerticalAlignment="Top" Width="52"/>
+        <Label Content="Anno:" HorizontalAlignment="Left" Margin="559,126,0,0" VerticalAlignment="Top" Width="52"/>
+        <Label Content="Editore:" HorizontalAlignment="Left" Margin="559,173,0,0" VerticalAlignment="Top" Width="52"/>
+        <Label Content="Numero pag:" HorizontalAlignment="Left" Margin="559,221,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtTitolo" HorizontalAlignment="Left" Height="23" Margin="644,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtAutore" HorizontalAlignment="Left" Height="23" Margin="644,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtAnno" HorizontalAlignment="Left" Height="23" Margin="644,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtEditore" HorizontalAlignment="Left" Height="23" Margin="644,176,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtNPag" HorizontalAlignment="Left" Height="23" Margin="644,225,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="bttCrea" Content="Crea Libro" HorizontalAlignment="Left" Margin="615,278,0,0" VerticalAlignment="Top" Width="121" Height="47"/>
+        <Label Content="Numero libri presenti:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="127"/>
+        <Label x:Name="lblNTot" Content="" HorizontalAlignment="Left" Margin="142,10,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label Content="Ricerca libro per:" HorizontalAlignment="Left" Margin="10,47,0,0" VerticalAlignment="Top" Width="127"/>
+        <RadioButton x:Name="rdbAutore" Content="Autore" HorizontalAlignment="Left" Margin="10,78,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="rdbTitolo" Content="Titolo" HorizontalAlignment="Left" Margin="93,78,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtCerca" HorizontalAlignment="Left" Height="23" Margin="10,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152"/>
+        <Button x:Name="bttCerca" Content="Cerca" HorizontalAlignment="Left" Margin="181,114,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label Content="Libri Trovati:" HorizontalAlignment="Left" Margin="10,158,0,0" VerticalAlignment="Top" Width="81"/>
+        <ListBox x:Name="lstLibri" HorizontalAlignment="Left" Height="204" Margin="10,189,0,0" VerticalAlignment="Top" Width="427"/>
+
     </Grid>
 </Window>
